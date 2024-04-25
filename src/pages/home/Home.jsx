@@ -23,7 +23,8 @@ function Home() {
                 "Working Towards a Healthier Tomorrow"
               </h1>
               <br />
-              <div className="font-sans text-black text-xl font-bold text-left mt-6 ">
+              <br />
+              <div className="font-sans text-black text-2xl  text-left mt-6 ">
                 <p>
                   {" "}
                   <span className="text-green-900 font-bold  animate-bounce ">
@@ -42,7 +43,9 @@ function Home() {
               <br />
               <br />
               <br />
-              <div className="font-sans text-white text-xl font-bold text-left mt-4">
+              <br />
+              <br />
+              <div className="font-sans text-white text-2xl  text-left mt-4">
                 <p className="">
                   {" "}
                   The core philosophy driving Microbax is product excellence{" "}
@@ -55,10 +58,10 @@ function Home() {
                   assurance.
                 </p>
               </div>
-              <div className="font-sans text-white font-bold text-xl text-left mt-4">
+              <div className="font-sans text-white  text-2xl text-left mt-4">
                 <p>
                   At Microbax, we believe in strict adherence to <br />
-                  <span className="text-white font-bold  hover:text-2xl  ">
+                  <span className="text-white   hover:text-3xl  ">
                     {" "}
                     "Current Good Manufacturing Practices" (CGMP)
                   </span>{" "}
@@ -74,14 +77,14 @@ function Home() {
 
           {/* microbax certified logo */}
           <div className="ml-40">
-            <div className="mr-50 pr-10 mt-10">
+            <div className="mr-50 pr-10 mt-20">
               <img
                 src="/assets/images/isologo.png"
                 alt=""
                 width={300}
                 height={200}
               />
-              <h2 className="text-black font-bold text-2xl">
+              <h2 className="text-black  text-2xl">
                 An ISO 9001:2008 Company
               </h2>
             </div>
