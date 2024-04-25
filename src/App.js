@@ -1,24 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Home from "./pages/home/Home";
+import About from "./pages/about/About";
+import Facilities from "./pages/facilities/Facilities";
+import Services from "./pages/services/Services";
+import Products from "./pages/products/Products";
+import Careers from "./pages/careers/Careers";
+import Gallery from "./pages/gallery/Gallery";
+import Contact from "./pages/contact/Contact";
+import Faq from "./pages/faq/Faq";
+// import Homepage from "./pages/home/Homepage";
+import Human from "./pages/products/careproducts/Human";
+import Animal from "./pages/products/careproducts/Animal";
+import Bioremede from "./pages/products/careproducts/Bioremede";
+import Aqua from "./pages/products/careproducts/Aqua";
+import Agriculture from "./pages/products/careproducts/Agriculture";
+import Vector from "./pages/products/careproducts/Vector";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/facilities" element={<Facilities />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/careers" element={<Careers />} />
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/faq" element={<Faq />} />
+        {/* <Route path="/" element={<Homepage/>} /> */}
+        <Route path="/product/human-health-care" element={<Human/>}/>
+        <Route path="/product/animal-health-care" element={<Animal/>}/>
+        <Route path="/product/bioremediation" element={<Bioremede/>}/>
+        <Route path="/product/aquaculture" element={<Aqua/>}/>
+        <Route path="product/agriculture" element={<Agriculture/>}/>
+        <Route path="/vector" element={<Vector/>}/>
+
+
+        
+      
+
+      </Routes>
+    </Router>
   );
 }
 
