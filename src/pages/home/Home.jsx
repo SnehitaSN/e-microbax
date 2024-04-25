@@ -27,7 +27,7 @@ function Home() {
               <div className="font-sans text-black text-2xl  text-left mt-6 ">
                 <p>
                   {" "}
-                  <span className="text-green-900 font-bold  animate-bounce ">
+                  <span className="text-green-900   animate-bounce ">
                     {" "}
                     Microbax is a leading producer of probiotics.
                   </span>{" "}
