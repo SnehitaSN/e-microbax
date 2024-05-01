@@ -9,11 +9,11 @@ import { HiOutlineBuildingOffice2 } from "react-icons/hi2";
 // import { MdOutlineFactory } from "react-icons/md";
 import { FaFax } from "react-icons/fa";
 import { IoMdHome } from "react-icons/io";
-import { RiInformation2Fill } from "react-icons/ri";
+// import { RiInformation2Fill } from "react-icons/ri";
 import { GiGears } from "react-icons/gi";
 import { FaServicestack } from "react-icons/fa6";
 import { GrCatalog } from "react-icons/gr";
-import { FaGraduationCap } from "react-icons/fa";
+// import { FaGraduationCap } from "react-icons/fa";
 import { AiTwotonePicture } from "react-icons/ai";
 import { MdOutlineContactPhone } from "react-icons/md";
 import { TbHelpTriangleFilled } from "react-icons/tb";
@@ -32,6 +32,7 @@ function Navbar() {
   const [selectedProduct, setSelectedProduct] = useState("");
 
   const products = [
+    "All Products",
     "Human Health Care",
     "Agriculture",
     "Animal Health care",
@@ -104,30 +105,39 @@ function Navbar() {
 
                 <div className="ml-auto flex items-center">
                   <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6 mr-8">
+                    {/* home */}
                     <Link
                       to={"/"}
                       className="text-2xl  font-sans font-semibold text-gray-900 hover:text-blue-700 transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-110 cursor-pointer"
                     >
                       Home
                     </Link>
-                    <Link
+
+                    {/* about us */}
+                    {/* <Link
                       to={"/about"}
                       className="text-2xl  font-sans font-semibold text-gray-900   hover:text-blue-700 transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-110 cursor-pointer"
                     >
                       About us
-                    </Link>
+                    </Link> */}
+
+                    {/* facilities */}
                     <Link
                       to={"/facilities"}
                       className="text-2xl  font-sans font-semibold text-gray-900  hover:text-blue-700 transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-110 cursor-pointer "
                     >
                       Facilities
                     </Link>
+
+                    {/* services */}
                     <Link
                       to={"/services"}
                       className="text-2xl  font-sans font-semibold text-gray-900  hover:text-blue-700 transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-110 cursor-pointer"
                     >
                       Services
                     </Link>
+
+                    {/* products */}
 
                     <div className="relative inline-block text-left">
                       <button
@@ -162,24 +172,32 @@ function Navbar() {
                       )}
                     </div>
 
-                    <Link
+                    {/* careers */}
+                    {/* <Link
                       to={"/careers"}
                       className="text-2xl  font-sans font-semibold text-gray-900  hover:text-blue-700 transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-110 cursor-pointer "
                     >
                       Careers
-                    </Link>
+                    </Link> */}
+
+                    {/* gallery */}
+
                     <Link
                       to={"/gallery"}
                       className="text-2xl  font-sans font-semibold text-gray-900  hover:text-blue-700 transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-110 cursor-pointer "
                     >
                       Gallery
                     </Link>
+
+                    {/* contact */}
                     <Link
                       to={"/contact"}
                       className="text-2xl  font-sans font-semibold text-gray-900  hover:text-blue-700 transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-110 cursor-pointer "
                     >
                       Contact
                     </Link>
+
+                    {/* faq */}
                     <Link
                       to={"/faq"}
                       className="text-2xl  font-sans font-semibold text-gray-900  hover:text-blue-700 transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-110 cursor-pointer "
@@ -220,17 +238,17 @@ function Navbar() {
               <div className="flex flex-col px-4 py-2 -mt-2">
                 <ul className="text-gray-500 text-xl text-start mt-3 ">
                   <li className="mb-2 rounded hover:shadow hover:bg-gray-300 transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-110 cursor-pointer">
-                    <Link to={"/home"} className="hover:text-green-600">
+                    <Link to={"/"} className="hover:text-green-600">
                       <IoMdHome className="inline-block w-6 h-6 mr-2 -mt-2 " />
                       Home
                     </Link>
                   </li>
-                  <li className="mb-2 rounded hover:shadow hover:bg-gray-300 transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-110 cursor-pointer">
+                  {/* <li className="mb-2 rounded hover:shadow hover:bg-gray-300 transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-110 cursor-pointer">
                     <Link to={"/about"} className="hover:text-green-600">
                       <RiInformation2Fill className="inline-block w-6 h-6 mr-2 -mt-2" />
                       About us
                     </Link>
-                  </li>
+                  </li> */}
                   <li className="mb-2 rounded hover:shadow hover:bg-gray-300 transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-110 cursor-pointer ">
                     <Link to={"/facilities"} className="hover:text-green-600">
                       <GiGears className="inline-block w-6 h-6 mr-2 -mt-2" />
@@ -284,12 +302,13 @@ function Navbar() {
                     )}
                   </div>
 
-                  <li className="mb-2 rounded hover:shadow hover:bg-gray-300 transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-110 cursor-pointer ">
+                  {/* <li className="mb-2 rounded hover:shadow hover:bg-gray-300 transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-110 cursor-pointer ">
                     <Link to={"/careers"} className="hover:text-green-600">
                       <FaGraduationCap className="inline-block w-6 h-6 mr-2 -mt-2" />
                       Careers
                     </Link>
-                  </li>
+                  </li> */}
+
                   <li className="mb-2 rounded hover:shadow hover:bg-gray-300 transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-110 cursor-pointer ">
                     <Link to={"/gallery"} className="hover:text-green-600">
                       <AiTwotonePicture className="inline-block w-6 h-6 mr-2 -mt-2" />

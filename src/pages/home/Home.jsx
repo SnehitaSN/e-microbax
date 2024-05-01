@@ -29,13 +29,15 @@ function Home() {
                   {" "}
                   <span className="text-green-900   animate-bounce ">
                     {" "}
-                    Microbax is a leading producer of probiotics.
+                    <span className="text-5xl">Microbax </span> is a leading
+                    producer of probiotics.
                   </span>{" "}
-                  The people <br />
-                  behind the project have expertise of over three decades in{" "}
                   <br />
-                  handling Fermentation systems, especially for producing <br />
-                  Probiotics and enzymes.
+                  The people behind the project have expertise of over three{" "}
+                  <br />
+                  decades in handling Fermentation systems, especially for{" "}
+                  <br />
+                  producing Probiotics and enzymes.
                 </p>
               </div>
               <br />
@@ -48,8 +50,11 @@ function Home() {
               <div className="font-sans text-white text-2xl  text-left mt-4">
                 <p className="">
                   {" "}
-                  The core philosophy driving Microbax is product excellence{" "}
-                  <br />
+                  <span className="text-black md:text-white">
+                    {" "}
+                    The core philosophy driving Microbax is product excellence{" "}
+                    <br />
+                  </span>
                   through value addition.Our incessant drive to achieve product{" "}
                   <br />
                   improvement, consistency and performance is perceptible
@@ -84,9 +89,7 @@ function Home() {
                 width={300}
                 height={200}
               />
-              <h2 className="text-black  text-2xl">
-                An ISO 9001:2008 Company
-              </h2>
+              <h2 className="text-black  text-2xl">An ISO 9001:2008 Company</h2>
             </div>
           </div>
         </div>

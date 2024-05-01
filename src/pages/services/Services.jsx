@@ -1,10 +1,14 @@
 import React from 'react'
+import Layout from '../../components/layout/Layout'
+
 
 function Services() {
   return (
-    <div>
-     Services 
-    </div>
+    <Layout>
+   Services
+  </Layout>
+    
+    
   )
 }
 

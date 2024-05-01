@@ -14,12 +14,11 @@ function Footer() {
 
   return (
     <footer className="text-gray-600 body-font bg-green-300">
-      <div className="bg-gradient-to-r from-green-200 to-blue-200">
-        <div className="container px-5 py-20 mx-auto ">
+      <div className="bg-gradient-to-r from-green-200 to-blue-200 ">
+        <div className="container px-5 py-10 mx-auto ">
           <div className="flex flex-wrap md:text-left text-center order-first">
-
             {/* company */}
-            <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+            <div className="lg:w-1/4 md:w-1/2 w-full px-4 mt-4">
               <h2 className="title-font  text-gray-900 font-bold mb-3 font-sans -mt-8 text-xl">
                 Company
               </h2>
@@ -70,7 +69,7 @@ function Footer() {
             </div>
 
             {/* Resources */}
-              <div className="lg:w-1/4 md:w-1/2 w-full px-4 ">
+            <div className="lg:w-1/4 md:w-1/2 w-full px-4  mt-4">
               <h2 className="title-font  text-gray-900 font-bold  mb-3 -mt-8 text-xl font-sans">
                 Resources
               </h2>
@@ -108,8 +107,8 @@ function Footer() {
               </nav>
             </div>
 
-          {/* Products */}
-            <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+            {/* Products */}
+            <div className="lg:w-1/4 md:w-1/2 w-full px-4 mt-4">
               <div className="ml-2">
                 <h2 className="title-font  text-gray-900 font-bold   mb-3 -mt-8 text-xl  font-sans">
                   Products
@@ -197,8 +196,8 @@ function Footer() {
               </nav> */}
             </div>
 
-              {/* microbax subscribe */}
-            <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+            {/* microbax subscribe */}
+            <div className="lg:w-1/4 md:w-1/2 w-full px-4 mt-4">
               <h2 className="title-font  font-medium text-gray-900  mb-3 -mt-8 text-4xl  font-sans">
                 Microbax
               </h2>
@@ -219,12 +218,12 @@ function Footer() {
           </div>
 
           <div className="">
-            <p className="text-center text-sm mb-2  font-sans text-gray-900  fonr-bold">
+            <p className="text-center text-sm  font-sans text-gray-900  font-normal">
               {" "}
               &copy; Copyright Microbax 2008 ---www.microbax.com
-            </p>
-
-            <hr className="text-gray-900  "></hr>
+            </p>{" "}
+            <br />
+            <hr className="text-gray-900 -mt-4 "></hr>
             <div className="flex flex-1 justify-center mt-4 ">
               <div className="flex justify-center -mt-2">
                 <a
@@ -265,6 +264,10 @@ function Footer() {
                   <FaLinkedin className="w-6 h-6 hover:text-green-900 transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-110 cursor-pointer" />
                 </a>
               </div>
+            </div> <br /> <br /> <br /> <br />
+            <div className="fixed bottom-0 right-0 mb-4 mr-4" >
+              {" "}
+              <p className="text-right">Designed & Developed by -Sk Developers</p>
             </div>
           </div>
         </div>
