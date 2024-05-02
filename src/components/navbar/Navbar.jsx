@@ -16,7 +16,7 @@ import { GrCatalog } from "react-icons/gr";
 // import { FaGraduationCap } from "react-icons/fa";
 import { AiTwotonePicture } from "react-icons/ai";
 import { MdOutlineContactPhone } from "react-icons/md";
-import { TbHelpTriangleFilled } from "react-icons/tb";
+// import { TbHelpTriangleFilled } from "react-icons/tb";
 
 import {
   FaFacebookF,
@@ -198,12 +198,12 @@ function Navbar() {
                     </Link>
 
                     {/* faq */}
-                    <Link
+                    {/* <Link
                       to={"/faq"}
                       className="text-2xl  font-sans font-semibold text-gray-900  hover:text-blue-700 transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-110 cursor-pointer "
                     >
                       F.A.Q
-                    </Link>
+                    </Link> */}
                   </div>
                   <button type="button">
                     <IoMenuOutline
@@ -321,12 +321,12 @@ function Navbar() {
                       Contact
                     </Link>
                   </li>
-                  <li className="mb-2 rounded hover:shadow hover:bg-gray-300  transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-110 cursor-pointer">
+                  {/* <li className="mb-2 rounded hover:shadow hover:bg-gray-300  transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-110 cursor-pointer">
                     <Link to={"/faq"} className="hover:text-green-600">
                       <TbHelpTriangleFilled className="inline-block w-6 h-6 mr-2 -mt-2" />
                       F.A.Q
                     </Link>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
 

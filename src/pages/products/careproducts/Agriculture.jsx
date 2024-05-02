@@ -257,7 +257,7 @@ function Agriculture() {
               <h1> For healthier growth & higher yields</h1>
             </div>
             <div className="col-span-1 row-span-1">
-              <img src="" alt="Image 2" className="w-full" />
+              {/* <img src="" alt="Image 2" className="w-full" /> */}
               <h1>Trichoderma viride</h1>
             </div>
             <div className="col-span-1 row-span-1">
