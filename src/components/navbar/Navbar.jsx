@@ -85,6 +85,46 @@ function Navbar() {
                 </h1>
               </div>
             </div>
+
+            {/* Media Queries */}
+            <style jsx>{`
+              @media only screen and (max-width: 639px) {
+                /* Small mobile devices */
+                .mt-1 {
+                  margin-top: 0.5rem;
+                }
+                .h-10 {
+                  height: auto; /* Adjust height for smaller screens */
+                  line-height: 1.5; /* Center text vertically */
+                }
+                .text-sm {
+                  font-size: 0.75rem; /* Decrease font size for smaller screens */
+                }
+                .text-lg {
+                  font-size: 0.875rem; /* Decrease font size for smaller screens */
+                }
+                .text-xl {
+                  font-size: 1rem; /* Decrease font size for smaller screens */
+                }
+                .text-md {
+                  font-size: 0.875rem; /* Decrease font size for smaller screens */
+                }
+                .animate-pulse {
+                  animation: none; /* Disable pulse animation for smaller screens */
+                }
+              }
+
+              @media only screen and (min-width: 640px) and (max-width: 767px) {
+                /* Medium devices */
+                .h-10 {
+                  height: auto; /* Adjust height for medium screens */
+                  line-height: 1.5; /* Center text vertically */
+                }
+                .text-md {
+                  font-size: 1rem; /* Adjust font size for medium screens */
+                }
+              }
+            `}</style>
           </div>
           {/* navbar */}
           <nav aria-label="Top" className=" px-4 sm:px-6 lg:px-8 mb-8 mt-6 ">
