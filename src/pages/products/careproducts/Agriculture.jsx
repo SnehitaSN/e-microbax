@@ -7,6 +7,7 @@ import p5 from "../../../assets/images/products/p5.png";
 import p6 from "../../../assets/images/products/p6.png";
 import p9 from "../../../assets/images/products/p9.png";
 import p2 from "../../../assets/images/products/p2.png";
+import p12 from "../../../assets/images/products/p12.png";
 
 function Agriculture() {
   return (
@@ -257,7 +258,7 @@ function Agriculture() {
               <h1> For healthier growth & higher yields</h1>
             </div>
             <div className="col-span-1 row-span-1">
-              {/* <img src="" alt="Image 2" className="w-full" /> */}
+              <img src={p12} alt="trikowin" className="w-2/3" />
               <h1>Trichoderma viride</h1>
             </div>
             <div className="col-span-1 row-span-1">

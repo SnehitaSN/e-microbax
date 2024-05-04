@@ -1,9 +1,11 @@
 import React, { useState } from "react";
- import { useNavigate } from "react-router-dom";
+//  import { useNavigate } from "react-router-dom";
 import Layout from "../../../components/layout/Layout";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Enquire() {
-   const navigate = useNavigate();
+  //  const navigate = useNavigate();
 
   // const handleGoBack = () => {
   //   // navigate("/product/all-products");
@@ -22,7 +24,7 @@ function Enquire() {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     // Simple validation to check if all required fields are filled
@@ -32,28 +34,56 @@ function Enquire() {
       formData.phoneNumber &&
       formData.message
     ) {
-      console.log(formData); // You can perform further actions here, like sending the data to a backend server
+      try {
+        // Send form data to webhook
+        await sendFormDataToWebhook(formData);
 
-      // Navigate to the products page
-       navigate("/product/all-products");
+        // Display success toast
+        toast.success("Form sent successfully! Thank you, we will get back to you as soon as possible.");
 
-      // Reset the form data
-      setFormData({
-        name: "",
-        email: "",
-        phoneNumber: "",
-        message: "",
-      });
+        // Navigate to the products page
+        // navigate("/product/all-products");
+
+        // Reset the form data
+        setFormData({
+          name: "",
+          email: "",
+          phoneNumber: "",
+          message: "",
+        });
+      } catch (error) {
+        console.error("Error sending form data:", error);
+        toast.error("Error sending form data. Please try again later.");
+      }
     } else {
-      // If any required field is missing, you can display an error message or handle it as per your requirements
-      alert("Please fill all the required fields");
+      // If any required field is missing, display an error message
+      toast.error("Please fill all the required fields");
     }
   };
 
-  // const handleGoBack = () => {
-  //   // Implement the functionality to go back
-  //   alert('Go back functionality goes here');
-  // };
+  // Function to send form data to webhook
+  const sendFormDataToWebhook = async (data) => {
+    // Example webhook URL
+    const webhookURL = "snehitakulkarni02@gmail.com";
+
+    try {
+      // Make a POST request to the webhook URL with form data
+      const response = await fetch(webhookURL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      // Check if the request was successful
+      if (!response.ok) {
+        throw new Error('Failed to send form data to webhook');
+      }
+    } catch (error) {
+      throw new Error('Failed to send form data to webhook');
+    }
+  };
 
   return (
     <div>
@@ -137,6 +167,7 @@ function Enquire() {
                 className="px-6 py-3 bg-green-500 text-white font-semibold rounded hover:bg-green-600"
               >
                 Submit
+                <ToastContainer/>
               </button>
               {/* <button
                 type="button"

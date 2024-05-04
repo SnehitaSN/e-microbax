@@ -296,10 +296,10 @@ function Allproducts() {
               <p className="text-gray-700  mb-4 leading-normal mt-4">
                 {product.description}
               </p>
-              <p className="text-green-500 font-semibold text-2xl mb-2">
+              {/* <p className="text-green-500 font-semibold text-2xl mb-2">
                 &#8377;{product.price}{" "}
                 <span className="text-gray-600 text-sm "> {product.unit}</span>
-              </p>
+              </p> */}
               {/* <p className="text-gray-600">Quantity: {product.quantity}</p> */}
               <button
                 onClick={handleClick}

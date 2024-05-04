@@ -267,7 +267,7 @@ function Footer() {
             </div> <br /> <br /> <br /> <br />
             <div className="fixed bottom-0 right-0 mb-4 mr-4" >
               {" "}
-              <p className="text-right">Designed & Developed by -Sk Developers</p>
+              {/* <p className="text-right">Designed & Developed by -Sk Developers</p> */}
             </div>
           </div>
         </div>

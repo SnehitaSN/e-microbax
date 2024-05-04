@@ -72,7 +72,7 @@ function Navbar() {
                   className="text-blue-700 text-lg font-sans "
                 >
                   <span className="text-gray-700 text-xl">Email:</span>{" "}
-                  sales@microbax.com
+                  {/* sales@microbax.com */} snehitakulkarni02@gmail.com
                 </a>
               </div>
             </p>
