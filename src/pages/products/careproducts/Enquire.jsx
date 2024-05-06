@@ -64,7 +64,7 @@ function Enquire() {
   // Function to send form data to webhook
   const sendFormDataToWebhook = async (data) => {
     // Example webhook URL
-    const webhookURL = "snehitakulkarni02@gmail.com";
+    const webhookURL = "https://hook.eu2.make.com/a9vezwv5ok2ry9poy8irnlrpm2jh1xwo";
 
     try {
       // Make a POST request to the webhook URL with form data
