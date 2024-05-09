@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useState,useRef } from "react";
 //  import { useNavigate } from "react-router-dom";
 import Layout from "../../../components/layout/Layout";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import emailjs from '@emailjs/browser';
 
 function Enquire() {
+  const form = useRef();
   //  const navigate = useNavigate();
 
   // const handleGoBack = () => {
@@ -27,6 +29,21 @@ function Enquire() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+
+
+    emailjs
+    .sendForm('service_rj17muu', 'template_jzz6tdv', form.current, {
+      publicKey: 'IGJxOp9tmw_wDidRr',
+    })
+    .then(
+      () => {
+        console.log('SUCCESS!');
+      },
+      (error) => {
+        console.log('FAILED...', error.text);
+      },
+    );
+
     // Simple validation to check if all required fields are filled
     if (
       formData.name &&
@@ -36,7 +53,7 @@ function Enquire() {
     ) {
       try {
         // Send form data to webhook
-        await sendFormDataToWebhook(formData);
+        // await sendFormDataToWebhook(formData);
 
         // Display success toast
         toast.success("Form sent successfully! Thank you, we will get back to you as soon as possible.");
@@ -62,28 +79,28 @@ function Enquire() {
   };
 
   // Function to send form data to webhook
-  const sendFormDataToWebhook = async (data) => {
-    // Example webhook URL
-    const webhookURL = "https://hook.eu2.make.com/a9vezwv5ok2ry9poy8irnlrpm2jh1xwo";
+  // const sendFormDataToWebhook = async (formData) => {
+  //   // Example webhook URL
+  //   // const webhookURL = "http://localhost:3000/enquire";
 
-    try {
-      // Make a POST request to the webhook URL with form data
-      const response = await fetch(webhookURL, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      });
+  //   try {
+  //     // Make a POST request to the webhook URL with form data
+  //     const response = await fetch('http://localhost:3000/enquire', {
+  //       method: 'POST',
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //       },
+  //       body: JSON.stringify(formData),
+  //     });
 
-      // Check if the request was successful
-      if (!response.ok) {
-        throw new Error('Failed to send form data to webhook');
-      }
-    } catch (error) {
-      throw new Error('Failed to send form data to webhook');
-    }
-  };
+  //     // Check if the request was successful
+  //     if (!response.ok) {
+  //       throw new Error('Failed to send form ');
+  //     }
+  //   } catch (error) {
+  //     throw new Error('Failed to send form ');
+  //   }
+  // };
 
   return (
     <div>
@@ -106,7 +123,7 @@ function Enquire() {
               <input
                 type="text"
                 id="name"
-                name="name"
+                name="user_name"
                 value={formData.name}
                 onChange={handleChange}
                 className="w-full px-4 py-2 rounded border border-green-400 focus:outline-none focus:border-green-500"
@@ -122,7 +139,7 @@ function Enquire() {
               <input
                 type="email"
                 id="email"
-                name="email"
+                name="from email"
                 value={formData.email}
                 onChange={handleChange}
                 className="w-full px-4 py-2 rounded border border-green-400 focus:outline-none focus:border-green-500"
@@ -138,7 +155,7 @@ function Enquire() {
               <input
                 type="tel"
                 id="phoneNumber"
-                name="phoneNumber"
+                name="from phoneNumber"
                 value={formData.phoneNumber}
                 onChange={handleChange}
                 className="w-full px-4 py-2 rounded border border-green-400 focus:outline-none focus:border-green-500"

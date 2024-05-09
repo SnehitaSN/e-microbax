@@ -28,6 +28,13 @@
     background-position: center;
   }
   
-  
+  /* styles.css */
+.myText {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.times-new-roman {
+  font-family: "Times New Roman", Times, serif;
+}
   
  

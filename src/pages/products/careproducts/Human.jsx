@@ -14,30 +14,30 @@ function Human() {
             <h2 className="text-2xl font-bold text-green-700 mb-4">
               Probiotics for Human Health Care:
             </h2>
-            <p className="text-lg text-blue-900 mb-4">
+            <p className="text-lg text-gray-600 mb-4">
               "Live microorganisms which when administered in adequate amounts
               confer a health benefit on the host"
             </p>
-            <ul className="list-disc ml-6">
-              <li className="text-lg text-blue-900">
+            <ul className="list-disc ml-6 text-gray-600">
+              <li className="text-lg ">
                 Lactobacillus acidophilus
               </li>
-              <li className="text-lg text-blue-900">Lactobacillus casei</li>
-              <li className="text-lg text-blue-900">Lactobacillus fermentum</li>
-              <li className="text-lg text-blue-900">Lactobacillus lactis</li>
-              <li className="text-lg text-blue-900">Lactobacillus plantarum</li>
-              <li className="text-lg text-blue-900">
+              <li className="text-lg ">Lactobacillus casei</li>
+              <li className="text-lg ">Lactobacillus fermentum</li>
+              <li className="text-lg ">Lactobacillus lactis</li>
+              <li className="text-lg ">Lactobacillus plantarum</li>
+              <li className="text-lg ">
                 Lactobacillus salivarius
               </li>
-              <li className="text-lg text-blue-900">
+              <li className="text-lg">
                 Lactobacillus sporogenes / Lactic acid bacillus / Bacillus
                 coagulans
               </li>
-              <li className="text-lg text-blue-900">Lactobacillus rhamnosus</li>
-              <li className="text-lg text-blue-900">Bifidobacterium bifidum</li>
-              <li className="text-lg text-blue-900">Bifidobacterium longum</li>
-              <li className="text-lg text-blue-900">Bacillus clausii</li>
-              <li className="text-lg text-blue-900">Saccharomyces boulardii</li>
+              <li className="text-lg ">Lactobacillus rhamnosus</li>
+              <li className="text-lg ">Bifidobacterium bifidum</li>
+              <li className="text-lg ">Bifidobacterium longum</li>
+              <li className="text-lg ">Bacillus clausii</li>
+              <li className="text-lg ">Saccharomyces boulardii</li>
             </ul>
           </div>
 

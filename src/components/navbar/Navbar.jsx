@@ -58,7 +58,7 @@ function Navbar() {
               <div className="flex items-center mr-4">
                 <FaPhone className="text-gray-700 text-xl mr-2 w-6 h-6 cursor-pointer" />
                 <span className="text-blue-700 text-lg font-sans">
-                  <span className="text-gray-700 text-xl cursor-pointer">
+                  <span className="text-gray-700 text-xl myText cursor-pointer">
                     Call:
                   </span>{" "}
                   +91-40-66360055, 66360056
@@ -71,7 +71,7 @@ function Navbar() {
                   href="mailto:example@example.com"
                   className="text-blue-700 text-lg font-sans "
                 >
-                  <span className="text-gray-700 text-xl">Email:</span>{" "}
+                  <span className="text-gray-700 myText text-xl">Email:</span>{" "}
                   sales@microbax.com 
                   
                 </a>
@@ -80,7 +80,7 @@ function Navbar() {
 
             <div className="mt-1">
               <div className="">
-                <h1 className="text-orange-700 font-semibold text-center text-md animate-pulse">
+                <h1 className="text-orange-700 font-semibold myText text-center text-md animate-pulse">
                   In-house R&D facility Recognised by Department of Scientific &
                   Industrial Research.Govt.of.India.
                 </h1>
@@ -138,7 +138,7 @@ function Navbar() {
                       <img
                         src={microbax_name}
                         alt="logo"
-                        style={{ width: "280px", height: "100px" }}
+                        style={{ width: "210px", height: "100px" }}
                       />
                     </div>
                   </Link>
@@ -149,7 +149,7 @@ function Navbar() {
                     {/* home */}
                     <Link
                       to={"/"}
-                      className="text-2xl  font-sans font-semibold text-gray-900 hover:text-blue-700 transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-110 cursor-pointer"
+                      className="text-2xl  myText font-semibold text-gray-900 hover:text-blue-700 transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-110 cursor-pointer"
                     >
                       Home
                     </Link>
@@ -165,7 +165,7 @@ function Navbar() {
                     {/* facilities */}
                     <Link
                       to={"/facilities"}
-                      className="text-2xl  font-sans font-semibold text-gray-900  hover:text-blue-700 transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-110 cursor-pointer "
+                      className="text-2xl  myText font-semibold text-gray-900  hover:text-blue-700 transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-110 cursor-pointer "
                     >
                       Facilities
                     </Link>
@@ -173,7 +173,7 @@ function Navbar() {
                     {/* services */}
                     <Link
                       to={"/services"}
-                      className="text-2xl  font-sans font-semibold text-gray-900  hover:text-blue-700 transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-110 cursor-pointer"
+                      className="text-2xl  myText font-semibold text-gray-900  hover:text-blue-700 transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-110 cursor-pointer"
                     >
                       Services
                     </Link>
@@ -183,7 +183,7 @@ function Navbar() {
                     <div className="relative inline-block text-left">
                       <button
                         type="button"
-                        className="text-2xl  font-sans font-semibold text-gray-900  hover:text-blue-700 transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-110 cursor-pointer"
+                        className="text-2xl  myText font-semibold text-gray-900  hover:text-blue-700 transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-110 cursor-pointer"
                         onClick={() => setShowProductsMenu(!showProductsMenu)}
                       >
                         Products
@@ -202,7 +202,7 @@ function Navbar() {
                                 to={`/product/${product
                                   .replace(/\s+/g, "-")
                                   .toLowerCase()}`}
-                                className="block px-2 py-2 text-xl text-gray-900 font-semibold  font-sans hover:text-gray-900 w-full -mt-2"
+                                className="block px-2 py-2 text-xl text-gray-900 font-semibold myText hover:text-gray-900 w-full -mt-2"
                                 onClick={() => handleProductSelect(product)}
                               >
                                 {product}
@@ -225,7 +225,7 @@ function Navbar() {
 
                     <Link
                       to={"/gallery"}
-                      className="text-2xl  font-sans font-semibold text-gray-900  hover:text-blue-700 transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-110 cursor-pointer "
+                      className="text-2xl  myText font-semibold text-gray-900  hover:text-blue-700 transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-110 cursor-pointer "
                     >
                       Gallery
                     </Link>
@@ -233,7 +233,7 @@ function Navbar() {
                     {/* contact */}
                     <Link
                       to={"/contact"}
-                      className="text-2xl  font-sans font-semibold text-gray-900  hover:text-blue-700 transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-110 cursor-pointer "
+                      className="text-2xl  myText font-semibold text-gray-900  hover:text-blue-700 transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-110 cursor-pointer "
                     >
                       Contact
                     </Link>
@@ -272,13 +272,13 @@ function Navbar() {
                 <img
                   src={microbax_name}
                   alt="logo"
-                  style={{ width: "250px", height: "100px" }}
+                  style={{ width: "210px", height: "80px" }}
                 />
               </div>
               <hr />
               <div className="flex flex-col px-4 py-2 -mt-2">
                 <ul className="text-gray-500 text-xl text-start mt-3 ">
-                  <li className="mb-2 rounded hover:shadow hover:bg-gray-300 transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-110 cursor-pointer">
+                  <li className="mb-2 rounded myText hover:shadow hover:bg-gray-300 transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-110 cursor-pointer">
                     <Link to={"/"} className="hover:text-green-600">
                       <IoMdHome className="inline-block w-6 h-6 mr-2 -mt-2 " />
                       Home
@@ -290,13 +290,13 @@ function Navbar() {
                       About us
                     </Link>
                   </li> */}
-                  <li className="mb-2 rounded hover:shadow hover:bg-gray-300 transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-110 cursor-pointer ">
+                  <li className="mb-2 myText rounded hover:shadow hover:bg-gray-300 transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-110 cursor-pointer ">
                     <Link to={"/facilities"} className="hover:text-green-600">
                       <GiGears className="inline-block w-6 h-6 mr-2 -mt-2" />
                       Facilities
                     </Link>
                   </li>
-                  <li className="mb-2 rounded hover:shadow hover:bg-gray-300 transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-110 cursor-pointer">
+                  <li className="mb-2 myText rounded hover:shadow hover:bg-gray-300 transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-110 cursor-pointer">
                     <Link to={"/services"} className="hover:text-green-600">
                       <FaServicestack className="inline-block w-6 h-6 mr-2 -mt-2" />
                       Services
@@ -312,7 +312,7 @@ function Navbar() {
                   <div className="relative inline-block text-left">
                     <button
                       type="button"
-                      className="mb-2 rounded hover:shadow hover:bg-gray-300 transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-110 cursor-pointer"
+                      className="mb-2 myText rounded hover:shadow hover:bg-gray-300 transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-110 cursor-pointer"
                       onClick={() => setShowProductsMenu(!showProductsMenu)}
                     >
                       <GrCatalog className="inline-block w-6 h-6 mr-2 -mt-2" />
@@ -332,7 +332,7 @@ function Navbar() {
                               to={`/product/${product
                                 .replace(/\s+/g, "-")
                                 .toLowerCase()}`}
-                              className="block px-10 py-2 text-sm  text-gray-900 font-normal text-start ml-12 font-sans  w-full hover:text-green-600 hover:font-bold  -mt-2"
+                              className="block px-10 py-2 text-sm myText  text-gray-900 font-normal text-start ml-12 font-sans  w-full hover:text-green-600 hover:font-bold  -mt-2"
                               onClick={() => handleProductSelect(product)}
                             >
                               {product}
@@ -350,13 +350,13 @@ function Navbar() {
                     </Link>
                   </li> */}
 
-                  <li className="mb-2 rounded hover:shadow hover:bg-gray-300 transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-110 cursor-pointer ">
+                  <li className="mb-2 myText rounded hover:shadow hover:bg-gray-300 transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-110 cursor-pointer ">
                     <Link to={"/gallery"} className="hover:text-green-600">
                       <AiTwotonePicture className="inline-block w-6 h-6 mr-2 -mt-2" />
                       Gallery
                     </Link>
                   </li>
-                  <li className="mb-2 rounded hover:shadow hover:bg-gray-300  transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-110 cursor-pointer">
+                  <li className="mb-2 rounded myText hover:shadow hover:bg-gray-300  transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-110 cursor-pointer">
                     <Link to={"/contact"} className="hover:text-green-600">
                       <MdOutlineContactPhone className="inline-block w-6 h-6 mr-2 -mt-2" />
                       Contact
@@ -384,7 +384,7 @@ function Navbar() {
               <br />
               <hr />
               <div className="">
-                <div className="flex items-center mt-2 transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-110 cursor-pointer">
+                <div className="flex items-center myText mt-2 transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-110 cursor-pointer">
                   <RiMapPinUserLine className="text-2xl text-bold text-gray-900 w-10 h-10" />
                   <h2 className="font-sans text-xl text-gray-900 font-bold ml-2">
                     Our Location
@@ -394,12 +394,12 @@ function Navbar() {
                 <div className="mt-2">
                   <div className="flex items-center mt-4">
                     <HiOutlineBuildingOffice2 className="text-2xl text-bold text-gray-900 w-8 h-8" />
-                    <h2 className="font-sans text-xl text-gray-900 font-normal ml-2">
+                    <h2 className="myText text-xl text-gray-900 font-normal ml-2">
                       Office Address
                     </h2>
                   </div>
                   <div className="mt-4">
-                    <p className="text-gray-500 text-lg font-normal font-sans mt-2">
+                    <p className="text-gray-500 text-lg font-normal myText mt-2">
                       Microbax (India) Limited,
                       <br /> 3-6-108/1, Liberty Road <br />
                       Himayat Nagar, Hyderabad–500029, A.P., INDIA.
@@ -407,7 +407,7 @@ function Navbar() {
                     <div className="mt-3">
                       <div className="flex items-center cursor-pointer">
                         <FaPhone className="text-2xl text-bold text-gray-500 w-6 h-6  hover:text-blue-500" />
-                        <h3 className="font-sans text-md text-gray-500 font-normal ml-2  hover:text-blue-500 hover:font-bold">
+                        <h3 className="myText text-md text-gray-500 font-normal ml-2  hover:text-blue-500 hover:font-bold">
                           :+91-40-66360055,66360056,
                         </h3>
                       </div>
@@ -416,7 +416,7 @@ function Navbar() {
                     <div className="mt-3">
                       <div className="flex items-center cursor-pointer">
                         <FaFax className="text-2xl text-bold text-gray-500 w-6 h-6  hover:text-blue-500" />
-                        <h3 className="font-sans text-md text-gray-500 font-normal ml-2 hover:text-blue-500 hover:font-bold">
+                        <h3 className="myText text-md text-gray-500 font-normal ml-2 hover:text-blue-500 hover:font-bold">
                           :+91-40-66360057.
                         </h3>
                       </div>
@@ -425,7 +425,7 @@ function Navbar() {
                     <div className="mt-3">
                       <div className="flex items-center  cursor-pointer">
                         <FaEnvelope className="text-2xl text-bold text-gray-500 w-6 h-6  hover:text-blue-500" />
-                        <h3 className="font-sans text-md text-gray-500 font-normal ml-2 hover:text-blue-500 hover:font-bold">
+                        <h3 className="myText text-md text-gray-500 font-normal ml-2 hover:text-blue-500 hover:font-bold">
                           :sales@microbax.com
                         </h3>
                       </div>

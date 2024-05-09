@@ -11,10 +11,10 @@ function Bioremede() {
         <div className="flex flex-col md:flex-row justify-between">
           {/* Left side: Description */}
           <div className="flex-1 md:mr-4 mb-4 md:mb-0 space-y-4 font-sans md:w-1/2">
-            <h3 className="text-lg font-semibold mb-2 text-green-700">
+            <h3 className="text-lg font-semibold mb-2 myText text-green-700">
               Ecobact-7
             </h3>
-            <p className="text-blue-900 text-lg">
+            <p className="text-gray-600 myText text-lg">
               Effective combination containing high strength of enzyme producing
               bacteria for degrading organic materials. High concentration waste
               digestor. Contains billions of potent bacteria (aerobic and

@@ -140,13 +140,12 @@ function Contact() {
           {/* Addresses */}
           <div className="   flex-1 md:ml-4 mt-4 md:mt-0 space-y-4 font-sans md:space-y-0 md:w-1/2">
             <div>
-              <h3 className="text-lg font-semibold  mb-2 text-green-700">
+              <h3 className="text-lg font-semibold  myText  mb-2 text-green-700">
                 Office Address
               </h3>
-              <p className="text-gray-600 text-md font-sans">
+              <p className="text-gray-600 text-md myText">
                 Microbax (India) Limited, 3-6-108/1, Liberty Road, Himayat
-                Nagar, Hyderabad–500 029, 
-                 A.P., INDIA. <br />
+                Nagar, Hyderabad–500 029, A.P., INDIA. <br />
                 Phone: 91 40 663 600 55, 663 600 56,
                 <br />
                 Fax: +91 40 663 600 57. <br />
@@ -154,12 +153,12 @@ function Contact() {
               </p>
             </div>
             <div>
-              <h3 className="text-lg font-semibold mb-2 text-green-700">
+              <h3 className="text-lg font-semibold myText mb-2 text-green-700">
                 Factory Address
               </h3>
-              <p className="text-gray-600 text-md font-sans">
-                Microbax (India) Limited, Sy.No.59, Nandigama Village,
-                Patancheru Mandal, Medak District, A.P., INDIA.
+              <p className="text-gray-600 text-md myText">
+                Microbax (India) Limited, Sy. No. 283/E, Mallepalli Village,
+                Konapur Mandal, Sangareddy District
               </p>
             </div>
           </div>

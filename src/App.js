@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
- import Home from "./pages/home/Home";
+import Home from "./pages/home/Home";
 // import About from "./pages/about/About";
 import Facilities from "./pages/facilities/Facilities";
 import Services from "./pages/services/Services";
@@ -17,6 +17,8 @@ import Agriculture from "./pages/products/careproducts/Agriculture";
 import Vector from "./pages/products/careproducts/Vector";
 import Allproducts from "./pages/products/careproducts/Allproducts";
 import Enquire from "./pages/products/careproducts/Enquire";
+import Eq2 from "./pages/products/careproducts/Eq2";
+
 
 function App() {
   return (
@@ -32,19 +34,16 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/faq" element={<Faq />} />
         {/* <Route path="/" element={<Homepage/>} /> */}
-        <Route path="/product/human-health-care" element={<Human/>}/>
-        <Route path="/product/animal-health-care" element={<Animal/>}/>
-        <Route path="/product/bioremediation" element={<Bioremede/>}/>
-        <Route path="/product/aquaculture" element={<Aqua/>}/>
-        <Route path="/product/agriculture" element={<Agriculture/>}/>
-        <Route path="/product/vector-control" element={<Vector/>}/>
-        <Route path="/product/all-products" element={<Allproducts/>}/>
-        <Route path="/enquire" element={<Enquire/>}/>
-
-
-        
-      
-
+        <Route path="/product/human-health-care" element={<Human />} />
+        <Route path="/product/animal-health-care" element={<Animal />} />
+        <Route path="/product/bioremediation" element={<Bioremede />} />
+        <Route path="/product/aquaculture" element={<Aqua />} />
+        <Route path="/product/agriculture" element={<Agriculture />} />
+        <Route path="/product/vector-control" element={<Vector />} />
+        <Route path="/product/all-products" element={<Allproducts />} />
+        <Route path="/enquire" element={<Enquire />} />
+        <Route path="/eq2" element={<Eq2 />} />
+       
       </Routes>
     </Router>
   );

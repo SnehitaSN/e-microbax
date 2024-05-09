@@ -7,7 +7,7 @@ function Vector() {
   return (
     <Layout>
       <div className="container mx-auto p-6 mt-20 rounded-lg mb-10">
-        <h2 className="text-2xl font-bold text-green-700 mb-4">
+        <h2 className="text-2xl font-bold myText text-green-700 mb-4">
           Microorganisms for Vector Control
         </h2>
         <div className="flex flex-col md:flex-row justify-between">
@@ -17,7 +17,7 @@ function Vector() {
               Microorganisms to control larvae of Vectors like mosquitoes &
               white flies
             </h3>
-            <ul className="list-disc pl-4 font-sans text-lg">
+            <ul className="list-disc pl-4 myText text-gray-600 text-lg">
               <li>Bacillus thuringiensis</li>
               <li>Bacillus sphaericus</li>
             </ul>

@@ -16,7 +16,7 @@ function Home() {
             <div className=" mt-6 mb-4 ">
               {" "}
               <h1
-                className={`font-sans text-3xl font-semibold text-purple-800 text-left ${
+                className={`myText text-3xl font-semibold text-purple-800 text-left ${
                   loaded ? "slide-in" : ""
                 }`}
               >
@@ -24,13 +24,13 @@ function Home() {
               </h1>
               <br />
               <br />
-              <div className="font-sans text-black text-2xl  text-left mt-6 ">
+              <div className="myText text-black text-2xl  text-left mt-6 ">
                 <p>
                   {" "}
                   <span className="text-green-900   animate-bounce ">
                     {" "}
-                    <span className="text-5xl">Microbax </span> is a leading
-                    producer of probiotics.
+                    <span className="text-5xl myText">Microbax </span> is a
+                    leading producer of probiotics.
                   </span>{" "}
                   <br />
                   The people behind the project have expertise of over three{" "}
@@ -44,13 +44,10 @@ function Home() {
               <br />
               <br />
               <br />
-              <br />
-              <br />
-              <br />
-              <div className="font-sans text-white text-2xl  text-left mt-4">
+              <div className="myText text-white text-2xl leading-tight text-left mt-4">
                 <p className="">
                   {" "}
-                  <span className="text-black md:text-white">
+                  <span className="text-black myText md:text-white">
                     {" "}
                     The core philosophy driving Microbax is product excellence{" "}
                     <br />
@@ -63,7 +60,7 @@ function Home() {
                   assurance.
                 </p>
               </div>
-              <div className="font-sans text-white  text-2xl text-left mt-4">
+              <div className="myText text-white leading-tight text-2xl text-left mt-4">
                 <p>
                   At Microbax, we believe in strict adherence to <br />
                   <span className="text-white   hover:text-3xl  ">
@@ -81,15 +78,17 @@ function Home() {
           </div>
 
           {/* microbax certified logo */}
-          <div className="ml-40">
+          <div className="ml-30 mt-10">
             <div className="mr-50 pr-10 mt-20">
               <img
                 src="/assets/images/isologo.png"
                 alt=""
-                width={300}
-                height={200}
+                width={200}
+                height={100}
               />
-              <h2 className="text-black  text-2xl">An ISO 9001:2008 Company</h2>
+              <h2 className="text-black myText text-start   text-xl">
+                An ISO 9001:2008 Company
+              </h2>
             </div>
           </div>
         </div>

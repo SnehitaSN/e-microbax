@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import Layout from "../../../components/layout/Layout";
+import Picture1 from "../../../assets/images/Picture1.png"
 
 function Allproducts() {
   const navigate = useNavigate();
@@ -270,20 +271,24 @@ function Allproducts() {
     // Add details for the remaining products
   ];
   const handleClick = () => {
-    navigate("/enquire");
+    navigate("/eq2");
   };
 
   return (
     <Layout>
       <div className="container mx-auto px-4 md:w-3/4 xl:w-5/6 mb-6">
-        <h1 className="text-3xl font-bold font-sans mb-12 mt-10">
+        <h1 className="text-3xl font-bold myText text-green-700 mb-12 mt-10">
           All Products
         </h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-4">
+        <div className="mb-6 text-center mt-4">
+          <img src={Picture1} alt="allproducts" className="mx-auto w-2/3 md:w-1/2 lg:w-1/3"  />
+        
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-4 mt-4" >
           {products.map((product) => (
             <div
               key={product.id}
-              className="p-4 bg-white shadow-xl border-2 border-green-500 rounded-lg"
+              className="p-4 bg-white shadow-xl border-2 border-green-500 rounded-lg mt-6"
             >
               <img
                 src={product.image}
