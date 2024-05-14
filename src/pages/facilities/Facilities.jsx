@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "../../components/layout/Layout";
-import f2 from "../../assets/images/f2.png";
+import g3 from "../../assets/images/g3.png";
 
 function Facilities() {
   return (
@@ -18,12 +18,13 @@ function Facilities() {
               </p>{" "}
               <p className=" mt-2  text-xl text-gray-800 leading-snug myText">
                 {" "}
-                The In-house R&amp;D Facility is recognized by DSIR – Dept of{" "}
-                <br />
-                Scientific &amp; Industrial research, Govt. of India. Research
-                and <br />
-                development activity is carried out mainly in the field of{" "}
-                <br />
+                The In-house R&amp;D Facility is recognized by <br />
+                <span className="text-xl myText text-green-700 text-semibold">
+                  DSIR – Dept of Scientific &amp; Industrial research, Govt. of
+                  India.
+                </span>{" "}
+                Research and development activity is carried out mainly in the
+                field of <br />
                 probiotics and prebiotics.
               </p>
             </div>
@@ -31,8 +32,8 @@ function Facilities() {
           {/* image1 */}
           <div className=" p-4 flex flex-col items-center justify-center ">
             <img
-              src={f2}
-              alt="probi"
+              src={g3}
+              alt="lab"
               className="max-w-full max-h-full mt-4"
               style={{ width: 400, height: 300 }}
             />

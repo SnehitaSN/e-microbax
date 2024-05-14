@@ -33,8 +33,8 @@ function Navbar() {
 
   const products = [
     "All Products",
-    "Human Health Care",
     "Agriculture",
+    "Human Health Care",
     "Animal Health care",
     "Bioremediation",
     "Aquaculture",
@@ -72,15 +72,14 @@ function Navbar() {
                   className="text-blue-700 text-lg font-sans "
                 >
                   <span className="text-gray-700 myText text-xl">Email:</span>{" "}
-                  sales@microbax.com 
-                  
+                  sales@microbax.com
                 </a>
               </div>
             </p>
 
             <div className="mt-1">
               <div className="">
-                <h1 className="text-orange-700 font-semibold myText text-center text-md animate-pulse">
+                <h1 className="text-blue-700 font-semibold myText text-center text-md animate-pulse">
                   In-house R&D facility Recognised by Department of Scientific &
                   Industrial Research.Govt.of.India.
                 </h1>
