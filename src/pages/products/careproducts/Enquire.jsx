@@ -1,9 +1,9 @@
-import React, { useState,useRef } from "react";
+import React, { useState, useRef } from "react";
 //  import { useNavigate } from "react-router-dom";
 import Layout from "../../../components/layout/Layout";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import emailjs from '@emailjs/browser';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import emailjs from "@emailjs/browser";
 
 function Enquire() {
   const form = useRef();
@@ -29,20 +29,18 @@ function Enquire() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-
-
     emailjs
-    .sendForm('service_rj17muu', 'template_jzz6tdv', form.current, {
-      publicKey: 'IGJxOp9tmw_wDidRr',
-    })
-    .then(
-      () => {
-        console.log('SUCCESS!');
-      },
-      (error) => {
-        console.log('FAILED...', error.text);
-      },
-    );
+      .sendForm("service_rj17muu", "template_jzz6tdv", form.current, {
+        publicKey: "IGJxOp9tmw_wDidRr",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
 
     // Simple validation to check if all required fields are filled
     if (
@@ -56,7 +54,9 @@ function Enquire() {
         // await sendFormDataToWebhook(formData);
 
         // Display success toast
-        toast.success("Form sent successfully! Thank you, we will get back to you as soon as possible.");
+        toast.success(
+          "Form sent successfully! Thank you, we will get back to you as soon as possible."
+        );
 
         // Navigate to the products page
         // navigate("/product/all-products");
@@ -78,29 +78,7 @@ function Enquire() {
     }
   };
 
-  // Function to send form data to webhook
-  // const sendFormDataToWebhook = async (formData) => {
-  //   // Example webhook URL
-  //   // const webhookURL = "http://localhost:3000/enquire";
-
-  //   try {
-  //     // Make a POST request to the webhook URL with form data
-  //     const response = await fetch('http://localhost:3000/enquire', {
-  //       method: 'POST',
-  //       headers: {
-  //         'Content-Type': 'application/json',
-  //       },
-  //       body: JSON.stringify(formData),
-  //     });
-
-  //     // Check if the request was successful
-  //     if (!response.ok) {
-  //       throw new Error('Failed to send form ');
-  //     }
-  //   } catch (error) {
-  //     throw new Error('Failed to send form ');
-  //   }
-  // };
+  
 
   return (
     <div>
@@ -184,7 +162,7 @@ function Enquire() {
                 className="px-6 py-3 bg-green-500 text-white font-semibold rounded hover:bg-green-600"
               >
                 Submit
-                <ToastContainer/>
+                <ToastContainer />
               </button>
               {/* <button
                 type="button"

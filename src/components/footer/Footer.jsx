@@ -1,7 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
+// import emailjs from "@emailjs/browser";
 
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+}
 function Footer() {
   const products = [
     "Human Health Care",
@@ -11,6 +18,29 @@ function Footer() {
     "Aquaculture",
     "Vector Control",
   ];
+
+  // const emailInput = useRef();
+
+  // const sendEmail = (e) => {
+  //   e.preventDefault();
+
+  //   emailjs
+  //     .send("service_rj17muu", "template_e77anec", {
+  //       to_email: emailInput.current.value,
+  //     }, "IGJxOp9tmw_wDidRr")
+  //     .then(
+  //       (response) => {
+  //         console.log("Email sent successfully!", response);
+  //         alert("Email sent successfully!");
+  //         // Optionally, you can reset the email input after sending the email
+  //         emailInput.current.value = "";
+  //       },
+  //       (error) => {
+  //         console.error("Email sending failed:", error);
+  //         alert("Email sending failed. Please try again later.");
+  //       }
+  //     );
+  //   }
 
   return (
     <footer className="text-gray-600 body-font bg-green-300">
@@ -24,14 +54,14 @@ function Footer() {
               </h2>
               <nav className="list-none -mt-1">
                 <div className="mb-2 font-sans">
-                  <li>
+                  {/* <li>
                     <Link
                       to={"/about"}
                       className="text-gray-900 text-lg font-semibold font- sans "
                     >
                       About us
                     </Link>
-                  </li>
+                  </li> */}
                 </div>
                 {/* <div className="mb-2">
                   <li>
@@ -49,6 +79,7 @@ function Footer() {
                     <Link
                       to={"/gallery"}
                       className="text-gray-900  text-lg font-semibold font- sans "
+                      onClick={scrollToTop}
                     >
                       Gallery
                     </Link>
@@ -58,10 +89,11 @@ function Footer() {
                 <div className="mb-8">
                   <li>
                     <Link
-                      to={"/faq"}
+                      to={"/contact"}
                       className="text-gray-900  text-lg font-semibold font- sans "
+                      onClick={scrollToTop}
                     >
-                      F.A.Q's
+                      Contact
                     </Link>
                   </li>
                 </div>
@@ -79,6 +111,7 @@ function Footer() {
                     <Link
                       to={"/facilities"}
                       className="text-gray-900  text-lg font-semibold font- sans "
+                      onClick={scrollToTop}
                     >
                       Facilities
                     </Link>
@@ -89,20 +122,21 @@ function Footer() {
                     <Link
                       to={"/services"}
                       className="text-gray-900  text-lg font-semibold font- sans "
+                      onClick={scrollToTop}
                     >
                       Services
                     </Link>
                   </li>
                 </div>
                 <div className="mb-2.5">
-                  <li>
+                  {/* <li>
                     <Link
                       to={"/careers"}
                       className="text-gray-900  text-lg font-semibold font- sans "
                     >
                       Careers
                     </Link>
-                  </li>
+                  </li> */}
                 </div>
               </nav>
             </div>
@@ -124,6 +158,7 @@ function Footer() {
                         .replace(/\s+/g, "-")
                         .toLowerCase()}`}
                       className="block px-2 py-2 text-lg text-gray-900 font-semibold  font-sans hover:text-gray-900 w-full -mt-2"
+                      onClick={scrollToTop}
                     >
                       {product}
                     </Link>
@@ -206,9 +241,10 @@ function Footer() {
               </p>
               <form>
                 <input
-                  type="name"
-                  placeholder="Enter Your Name"
+                  type="email"
+                  placeholder="Enter Your Email"
                   className="bg-gray-500 text-white px-1 py-2 rounded-lg"
+                  required
                 ></input>
                 <button className="bg-white px-1 py-2 mr-2 mt-4 text-black rounded-lg  font-sans ">
                   Subscribe
@@ -264,8 +300,9 @@ function Footer() {
                   <FaLinkedin className="w-6 h-6 hover:text-green-900 transition ease-in-out delay-300 hover:-translate-y-1 hover:scale-110 cursor-pointer" />
                 </a>
               </div>
-            </div> <br /> <br /> <br /> <br />
-            <div className="fixed bottom-0 right-0 mb-4 mr-4" >
+            </div>{" "}
+            <br /> <br /> <br /> <br />
+            <div className="fixed bottom-0 right-0 mb-4 mr-4">
               {" "}
               {/* <p className="text-right">Designed & Developed by -Sk Developers</p> */}
             </div>

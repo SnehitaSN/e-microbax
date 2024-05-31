@@ -23,10 +23,27 @@ import p20 from "../../../assets/images/products/p20.jpeg";
 import p13 from "../../../assets/images/products/p13.jpeg";
 import p16 from "../../../assets/images/products/p16.jpeg"
 import p17 from "../../../assets/images/products/p17.jpeg";
+// import p27 from "../../../assets/images/products/p27.png";
+// import p28 from "../../../assets/images/products/p28.png";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDownload } from '@fortawesome/free-solid-svg-icons';
+
+
+
 
 function Agriculture() {
+
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = '/assets/images/mbxbrochure.pdf';
+    link.download = 'mbxbrochure.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
   return (
     <Layout>
+      <div>
       <div className="container mx-auto p-6 mt-10">
         {/* plant growth enhancers */}
         <div className=" mb-4 md:mb-12 lg:mb-16">
@@ -356,10 +373,10 @@ function Agriculture() {
           </div>
 
           {/* bio control 2 */}
-          <div className="-mt-6 sm:mt-2 md:mt-2">
-            <div className="flex items-center justify-center myText flex-wrap">
+          {/* <div className="-mt-6 sm:mt-2 md:mt-2"> */}
+            {/* <div className="flex items-center justify-center myText flex-wrap"> */}
               {/* Left side */}
-              <div className="flex flex-col items-start justify-center  w-full sm:w-1/2 pr-4 mb-4 sm:mb-0">
+              {/* <div className="flex flex-col items-start justify-center  w-full sm:w-1/2 pr-4 mb-4 sm:mb-0">
                 <h1 className="text-3xl  text-indigo-900 myText ">Sutlex®</h1>
 
                 <p className="text-lg myText text-gray-600 leading-snug">
@@ -368,13 +385,14 @@ function Agriculture() {
                   high.Sutlex,is used for control of soil borne disease and also
                   for leaf and fruit diseases on variety of crops.
                 </p>
-              </div>
+              </div> */}
               {/* Right side */}
-              <div className="w-1/2 pl-4">
-                <img src={p25} alt="sultex" className="w-full sm:w-80 h-150 " />
-              </div>
-            </div>
-          </div>
+              {/* <div className="w-1/2 pl-4">
+                <img src={p27} alt="sultex" className="w-full sm:w-80 h-150 " />
+              </div> */}
+            {/* </div>
+          </div> */}
+
           {/* bio control 3 */}
           <div className="-mt-6 sm:mt-2 md:mt-2">
             <div className="flex items-center justify-center myText flex-wrap">
@@ -396,11 +414,12 @@ function Agriculture() {
               </div>
             </div>
           </div>
+
           {/* bio control 4 */}
-          <div className="-mt-6 sm:mt-2 md:mt-2">
-            <div className="flex items-center justify-center myText flex-wrap">
+          {/* <div className="-mt-6 sm:mt-2 md:mt-2"> */}
+            {/* <div className="flex items-center justify-center myText flex-wrap"> */}
               {/* Left side */}
-              <div className="flex flex-col items-start justify-center w-full sm:w-1/2 pr-4 mb-4 sm:mb-0">
+              {/* <div className="flex flex-col items-start justify-center w-full sm:w-1/2 pr-4 mb-4 sm:mb-0">
                 <h1 className="text-3xl  text-indigo-900 myText ">Vibimax®</h1>
 
                 <p className="text-lg myText text-gray-600 leading-snug mt-1">
@@ -411,13 +430,14 @@ function Agriculture() {
                   white grub, mealybug, thrips, aphids,jassids, plant hopper,
                   beetles, caterpillars, stem borer, mites etc
                 </p>
-              </div>
+              </div> */}
               {/* Right side */}
-              <div className="w-1/2 pl-4">
-                <img src={p25} alt="vibimax" className="w-full sm:w-80 h-150" />
-              </div>
-            </div>
-          </div>
+              {/* <div className="w-1/2 pl-4">
+                <img src={p28} alt="vibimax" className="w-50 sm:w-80 h-150" />
+              </div> */}
+            {/* </div> */}
+          {/* </div> */}
+
           {/* bio  control 5 */}
           <div className="-mt-8 sm:mt-2 md:mt-2">
             <div className="flex items-center justify-center myText flex-wrap ">
@@ -812,6 +832,17 @@ function Agriculture() {
             </ul>
           </div>
         </div>
+      </div>
+
+      <div className="flex justify-end p-4">
+        <button
+          onClick={handleDownload}
+          className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded flex items-center space-x-2"
+        >
+          <FontAwesomeIcon icon={faDownload} className="w-4 h-4" />
+          <span>Download Brochure</span>
+        </button>
+      </div>
       </div>
     </Layout>
   );

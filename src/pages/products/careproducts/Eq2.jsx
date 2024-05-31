@@ -1,12 +1,23 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import Layout from "../../../components/layout/Layout";
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 function Eq2() {
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
+    const formData = new FormData(form.current);
+    const name = formData.get("from_name");
+    const email = formData.get("from_email");
+    const message = formData.get("message");
+
+     // Simple validation to check if any required field is missing
+     if (!name || !email || !message) {
+      toast.error("Please fill all the required fields");
+      return;
+    }
 
     emailjs
       .sendForm("service_rj17muu", "template_e77anec", form.current, {
@@ -15,6 +26,10 @@ function Eq2() {
       .then(
         () => {
           console.log("SUCCESS!");
+           // Reset the form after successful submission
+           form.current.reset();
+            // Toast message for successful submission
+          toast.success("Message sent successfully!");
         },
         (error) => {
           console.log("FAILED...", error.text);
@@ -25,6 +40,7 @@ function Eq2() {
   return (
     <div>
       <Layout>
+      <ToastContainer />
         <form
           ref={form}
           onSubmit={sendEmail}
