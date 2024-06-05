@@ -1,8 +1,16 @@
+# Disable directory listings
 Options -Indexes
+
+# Enable URL rewriting
 RewriteEngine On
 RewriteBase /
 
-# Serve index.html for all routes
+# Serve index.html for all requests except for existing files and directories
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ /index.html [L,QSA]
+RewriteRule ^.*$ /index.html [L,QSA]
+
+# Serve static files from the 'build' directory
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /build/$1 [L,QSA]
